@@ -13,7 +13,10 @@ add_library(${PROJECT_NAME}
         src/filesystem/FileSystem.h
         src/string/String.cpp
         src/string/String.h
-        src/memory/move.h)
+        src/memory/move.h
+        src/types.h
+        )
+
 
 target_include_directories(${PROJECT_NAME} PUBLIC src)
 
