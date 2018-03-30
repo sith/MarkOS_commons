@@ -25,6 +25,21 @@ namespace mark_os {
                 return present;
             }
 
+            T operator()() {
+                return value;
+            }
+
+            explicit operator bool() const {
+                return isPresent();
+            }
+
+            bool operator==(const Optional &rhs) const {
+                return value == rhs.value;
+            }
+
+            bool operator!=(const Optional &rhs) const {
+                return !(rhs == *this);
+            }
         };
 
 
