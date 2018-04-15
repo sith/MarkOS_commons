@@ -4,6 +4,7 @@
 
 #include "LinkedListTest.h"
 
+using namespace mark_os::commons;
 
 TEST(LinkedListTest, addElement) {
     LinkedList<int> list;

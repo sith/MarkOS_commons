@@ -8,26 +8,30 @@
 #include <memory/Pointer.h>
 #include "Iterator.h"
 
-template<class T>
-class List {
+namespace mark_os {
+    namespace commons {
+        template<class T>
+        class List {
 
-public:
+        public:
 
-    virtual ~List() {};
+            virtual ~List() {};
 
-    virtual void add(T *e)= 0;
+            virtual void add(T *e)= 0;
 
-    virtual T *remove(int index)= 0;
+            virtual T *remove(int index)= 0;
 
-    virtual bool removeByPointer(T *e)= 0;
+            virtual bool removeByPointer(T *e)= 0;
 
-    virtual T *get(int index)= 0;
+            virtual T *get(int index)= 0;
 
-    virtual int size()=0;
+            virtual int size()=0;
 
-    virtual bool contains(T *e)=0;
+            virtual bool contains(T *e)=0;
 
-    virtual Pointer<Iterator<T>> iterator()=0;
-};
+            virtual Pointer<Iterator<T>> iterator()=0;
+        };
+    }
+}
 
 #endif //CPP_PLAYGROUND_LIST_H
