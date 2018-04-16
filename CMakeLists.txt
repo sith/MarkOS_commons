@@ -15,7 +15,7 @@ add_library(${PROJECT_NAME}
         src/string/String.h
         src/memory/move.h
         src/types.h
-        src/util/Optional.h)
+        src/util/Optional.h src/collections/InMemoryList.h)
 
 
 target_include_directories(${PROJECT_NAME} PUBLIC src)
