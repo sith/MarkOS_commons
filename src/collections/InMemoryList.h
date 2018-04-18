@@ -9,14 +9,18 @@
 
 namespace mark_os {
     namespace commons {
-        template<typename T, uint16 Size>
+        template<typename T, uint16 MaxSize>
         class InMemoryList {
-            T list[Size];
-
-            using iterator = T *;
+            T list[MaxSize];
+            using iterator = const T *;
+            uint16 currentSize = 0;
         public:
             void add(const T &t) {
+                list[currentSize++] = t;
+            }
 
+            bool set(uint16 index, const T &t) {
+                return false;
             }
 
             void remove(uint16 index) {
@@ -28,18 +32,16 @@ namespace mark_os {
             }
 
             uint16 size() {
-                return 0;
+                return currentSize;
             }
 
             iterator begin() const {
-                return nullptr;
+                return &list[0];
             }
 
             iterator end() const {
-                return nullptr;
+                return &list[currentSize];
             }
-
-
         };
     }
 }
