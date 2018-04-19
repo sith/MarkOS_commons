@@ -5,7 +5,7 @@
 #ifndef MARKOS_TYPES_H
 #define MARKOS_TYPES_H
 using int8 = char;
-using int16 = short int;
+using int16 = signed int;
 using int32 = int;
 using uint8 = unsigned char;
 using uint16 = unsigned short int;
